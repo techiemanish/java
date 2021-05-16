@@ -1,0 +1,58 @@
+import java.util.*;
+interface AdvancedArithmetic{
+  int divisor_sum(int n);
+}
+class MyCalculator implements AdvancedArithmetic{
+    public int divisor_sum(int n){
+        int x;
+        int temp = 0;
+        ArrayList <Integer> arr = new ArrayList<Integer>();
+        if(n%2==0){
+            x=n/2;
+            for(int i=1;i<=x;i++){
+                if(n%i==0){
+                    arr.add(i);
+                }
+            }
+            arr.add(n);
+            //Checking what is stored in Arraylist
+            System.out.println(arr);
+        }
+        else{
+            for(int j=1;j<=n;j++){
+                if(n%j==0){
+                    arr.add(j);
+                }
+            }
+        System.out.println(arr);
+        }
+        for(int i : arr){
+            temp += i;
+        }
+        return temp;
+    }
+}
+
+
+public class Solution{
+    public static void main(String []args){
+        MyCalculator my_calculator = new MyCalculator();
+        System.out.print("I implemented: ");
+        ImplementedInterfaceNames(my_calculator);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.print(my_calculator.divisor_sum(n) + "\n");
+      	sc.close();
+    }
+    /*
+     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
+     */
+    static void ImplementedInterfaceNames(Object o){
+        Class[] theInterfaces = o.getClass().getInterfaces();
+        for (int i = 0; i < theInterfaces.length; i++){
+            String interfaceName = theInterfaces[i].getName();
+            System.out.println(interfaceName);
+        }
+    }
+}
+

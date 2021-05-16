@@ -1,0 +1,33 @@
+// Aggregation (Bike has brand)
+class Brand{
+    String brand;
+    int id,model;
+    
+    
+    public Brand(int id, String brand,int model){
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+    }
+    
+}
+public class Bike{
+    Brand b1;
+    String Name, Color;
+    public Bike(String Name, String Color, Brand b1){
+        this.Name = Name;
+        this.Color = Color;
+        this.b1 = b1;
+    }
+    void display(){
+        System.out.println(Name + " "+ b1.brand+ " has launched " + Color + " Color of " + b1.model + " model in the indian market" );
+    }
+    public static void main(String args[]){
+        Brand b1 = new Brand(1,"ZT Series",2019);
+        Bike obj = new Bike("Yamaha","Blue",b1);
+        obj.display();
+        
+        
+    }
+    
+}

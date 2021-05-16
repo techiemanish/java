@@ -1,0 +1,21 @@
+// Constructor Chaining
+public class A{
+    int id;
+    String Name;
+    A(){
+        System.out.println("Object Created");
+    }
+    A(int id, String Name){
+        this();
+        this.id = id;
+        this.Name = Name;
+    }
+    void display(){
+        System.out.println("Employee has an id " + id + " and name "+ Name);
+        }
+    public static void main(String [] args){
+        A obj = new A(1, "Manish");
+        obj.display();
+        
+    }
+}
