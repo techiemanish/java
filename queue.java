@@ -34,7 +34,7 @@ public class queue {
       System.out.println("Peek element using element() method: " + q1.element());
       
       //Contain method of Collection
-      System.out.println(q1.contains(5));
+      System.out.println("Queue contains the element: " + q1.contains(5));
       
       System.out.println();
       //Queue using PriorityQueue
@@ -71,6 +71,6 @@ public class queue {
       System.out.println("Peek element using element() method: " + q2.element());
       
       //Contain method of Collection
-      System.out.println(q2.contains(5));
+      System.out.println("Queue contains the element: " + q2.contains(5));
     }
 }
