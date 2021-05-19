@@ -40,7 +40,7 @@ public class queue {
       //Queue using PriorityQueue
       System.out.println("Queue using PriorityQueue Implementation");
       Queue<Integer> q2 = new PriorityQueue<Integer>();
-      // Operations on Queue 1
+      // Operations on Queue 2
       //Adding element using add() method
       q2.add(1);
       q2.add(2);
