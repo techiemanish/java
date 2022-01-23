@@ -18,7 +18,7 @@ public class MyClass {
               
           }
       }
-      System.out.println(max2);
+      System.out.println("The second highest number is " + max2);
       
     }
 }
